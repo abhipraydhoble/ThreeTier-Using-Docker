@@ -8,14 +8,14 @@ RUN apt install default-jdk -y
 
 WORKDIR /opt/tomcat/
 
-ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.97/bin/apache-tomcat-9.0.97.tar.gz /opt/tomcat/
+ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.98/bin/apache-tomcat-9.0.98.tar.gz /opt/tomcat/
 
-RUN tar -xvzf apache-tomcat-9.0.97.tar.gz -C /opt/tomcat/
+RUN tar -xvzf apache-tomcat-9.0.98.tar.gz -C /opt/tomcat/
 
-ADD https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war /opt/tomcat/apache-tomcat-9.0.97/webapps/
+ADD https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war /opt/tomcat/apache-tomcat-9.0.98/webapps/
 
-ADD https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar /opt/tomcat/apache-tomcat-9.0.97/lib/
+ADD https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar /opt/tomcat/apache-tomcat-9.0.98/lib/
 
-COPY context.xml ./apache-tomcat-9.0.97/conf/context.xml
+COPY context.xml ./apache-tomcat-9.0.98/conf/context.xml
 
-CMD ["apache-tomcat-9.0.97/bin/catalina.sh","run"]
+CMD ["apache-tomcat-9.0.98/bin/catalina.sh","run"]
