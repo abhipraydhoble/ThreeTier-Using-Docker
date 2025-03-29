@@ -1,4 +1,4 @@
-# Three-Tier Architecture using Docker (Without Docker Compose)
+# Three-Tier Architecture using Docker 
 
 ## **Overview**
 This project demonstrates a three-tier architecture using Docker containers for a **frontend, backend, and database** setup. The setup involves:
