@@ -15,6 +15,7 @@ RUN tar -xvzf apache-tomcat-9.0.102.tar.gz  -C /opt/tomcat/
 ADD https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war /opt/tomcat/apache-tomcat-9.0.102/webapps/
 
 ADD https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar /opt/tomcat/apache-tomcat-9.0.102/lib/
+EXPOSE 8080
 
 COPY context.xml ./apache-tomcat-9.0.102/conf/context.xml
 
