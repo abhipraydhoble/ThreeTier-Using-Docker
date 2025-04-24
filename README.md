@@ -98,12 +98,10 @@ Navigate to the `frontend` directory:
 cd ../frontend
 ```
 
-#### **4.1 Update the `index.html` File**
+#### **4.1 Update the `index.html` File in Frontend Directory**
 Edit `index.html` and replace the backend URL:
 ```html
-<script>
-    var backendUrl = "http://<INSTANCE_PUBLIC_IP>:8080/student";
-</script>
+<a href="http://54.169.189.50:8080/student/">Register Here</a>
 ```
 Replace `<INSTANCE_PUBLIC_IP>` with your actual server's public IP.
 
