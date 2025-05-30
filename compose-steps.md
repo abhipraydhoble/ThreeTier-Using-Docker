@@ -78,7 +78,11 @@ sudo chmod +x /usr/local/bin/docker-compose
 ````
 docker-compose --version
 ````
-
+## clone repository
+````
+git clone https://github.com/abhipraydhoble/ThreeTier-Using-Docker.git
+cd ThreeTier-Using-Docker
+````
 ## add connection string in ./Backend/context.xml 
 ## add instance ip ./Frontend/index.html
 
