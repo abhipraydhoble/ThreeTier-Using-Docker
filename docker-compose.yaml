@@ -1,26 +1,26 @@
 version: '3.8'
 
 services:
-  db:
-    build:
-      context: ./Database
-      dockerfile: Dockerfile
-    container_name: my-mysql-db
-    environment:
-      MYSQL_ROOT_PASSWORD: 1234
-      MYSQL_DATABASE: studentapp
-    ports:
-      - "3306:3306"
-
   backend:
     build:
       context: ./Backend
       dockerfile: Dockerfile
     container_name: backend-service
     environment:
-      DB_HOST: db
+      DB_HOST: your-rds-endpoint.amazonaws.com
       DB_PORT: 3306
       DB_NAME: studentapp
-      DB_USER: root
-      DB_PASSWORD: 1234
-"docker-compose.yaml" 29L, 539B                                                                            1,1           Top
+      DB_USER: your_db_user
+      DB_PASSWORD: your_db_password
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile
+    container_name: frontend-service
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
