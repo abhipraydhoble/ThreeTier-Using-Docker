@@ -19,6 +19,7 @@ Ensure you have the following installed:
 
 ### **Step 1: Clone the Repository**
 ```bash
+sudo yum install git -y
 git clone https://github.com/abhipraydhoble/ThreeTier-Using-Docker.git
 cd ThreeTier-Using-Docker
 ```
