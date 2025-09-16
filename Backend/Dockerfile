@@ -16,6 +16,6 @@ ADD https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war /opt/tomcat/ap
 
 ADD https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar /opt/tomcat/apache-tomcat-9.0.109/lib/
 
-COPY context.xml ./apache-tomcat-9.0.108/conf/context.xml
+COPY context.xml ./apache-tomcat-9.0.109/conf/context.xml
 
-CMD ["apache-tomcat-9.0.108/bin/catalina.sh","run"]
+CMD ["apache-tomcat-9.0.109/bin/catalina.sh","run"]
